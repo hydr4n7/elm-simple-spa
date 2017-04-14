@@ -3,7 +3,9 @@
 }
 
 html, body {
+  font-family: 'Open Sans', sans-serif;
   height: 100%;
+  margin: 0px;
 }
 
 
@@ -15,7 +17,7 @@ html, body {
 
 .footer {
   padding: 1em;
-  background-color: red;
+  background-color: #747474;
 }
 
 .content {

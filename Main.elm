@@ -1,8 +1,29 @@
 module Main exposing (..)
 
+-- Packages imports
+
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Navigation
+
+
+-- Pages imports
+
+import Pages.HomePage exposing (homePage)
+import Pages.AboutPage exposing (aboutPage)
+import Pages.ContactPage exposing (contactPage)
+
+
+-- Partials imports
+
+import Partials.Navbar exposing (navbar)
+import Partials.Footer exposing (footerView)
+
+
+-- Misc imports
+
+import Messages exposing (..)
+import Subscriptions exposing (..)
 
 
 main : Program Never Model Msg
@@ -11,7 +32,7 @@ main =
         { init = (\_ -> ( Model Home, Cmd.none ))
         , view = view
         , update = update
-        , subscriptions = (\_ -> Sub.none)
+        , subscriptions = subscriptions
         }
 
 
@@ -24,10 +45,6 @@ type Page
 type alias Model =
     { page : Page
     }
-
-
-type Msg
-    = UrlChange Navigation.Location
 
 
 getPage : String -> Page
@@ -62,29 +79,14 @@ view model =
         ]
 
 
-viewLinks : String -> Html Msg
-viewLinks name =
-    div [] [ a [ href ("#" ++ name) ] [ text name ] ]
-
-
-navbar : Html Msg
-navbar =
-    nav [] (List.map viewLinks [ "home", "about", "contact" ])
-
-
-footerView : Html Msg
-footerView =
-    footer [] [ text "This is my footer" ]
-
-
 content : Model -> Html Msg
 content model =
     case model.page of
         Home ->
-            h1 [ id "dupa" ] [ text "Home page!" ]
+            homePage
 
         About ->
-            h1 [] [ text "About page!" ]
+            aboutPage
 
         Contact ->
-            h1 [] [ text "Contact page!" ]
+            contactPage
