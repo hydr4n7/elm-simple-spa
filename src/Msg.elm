@@ -1,4 +1,4 @@
-module Messages exposing (..)
+module Msg exposing (..)
 
 import Navigation
 

@@ -2,7 +2,7 @@ module Partials.Navbar exposing (navbar)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Messages exposing (..)
+import Msg exposing (..)
 
 
 viewLinks : String -> Html Msg

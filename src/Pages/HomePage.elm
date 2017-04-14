@@ -2,7 +2,7 @@ module Pages.HomePage exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Messages exposing (..)
+import Msg exposing (..)
 
 
 homePage : Html Msg

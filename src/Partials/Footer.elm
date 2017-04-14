@@ -2,7 +2,7 @@ module Partials.Footer exposing (footerView)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Messages exposing (..)
+import Msg exposing (..)
 
 
 footerView : Html Msg

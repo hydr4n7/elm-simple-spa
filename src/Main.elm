@@ -22,7 +22,8 @@ import Partials.Footer exposing (footerView)
 
 -- Misc imports
 
-import Messages exposing (..)
+import Model exposing (..)
+import Msg exposing (..)
 import Subscriptions exposing (..)
 
 
@@ -34,17 +35,6 @@ main =
         , update = update
         , subscriptions = subscriptions
         }
-
-
-type Page
-    = Home
-    | About
-    | Contact
-
-
-type alias Model =
-    { page : Page
-    }
 
 
 getPage : String -> Page

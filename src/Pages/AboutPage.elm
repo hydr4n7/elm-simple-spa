@@ -2,7 +2,7 @@ module Pages.AboutPage exposing (aboutPage)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Messages exposing (..)
+import Msg exposing (..)
 
 
 aboutPage : Html Msg

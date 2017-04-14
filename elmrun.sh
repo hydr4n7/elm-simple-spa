@@ -1,6 +1,7 @@
 path=$(pwd)
 echo $path
-cp *.css $path/dist/.
-elm-make Main.elm --output $path/dist/main.js
+cp src/static/*.css $path/dist/.
+elm-make src/Main.elm --output $path/dist/main.js
+echo -n
 echo '>>> Reload Your Browser > Ctrl + R'
 

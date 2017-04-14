@@ -2,7 +2,7 @@ module Pages.ContactPage exposing (contactPage)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Messages exposing (..)
+import Msg exposing (..)
 
 
 contactPage : Html Msg
