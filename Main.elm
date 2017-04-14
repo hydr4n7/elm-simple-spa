@@ -53,19 +53,19 @@ update msg model =
             { model | page = (getPage location.hash) } ! [ Cmd.none ]
 
 
-
-
 view : Model -> Html Msg
 view model =
-    div []
-        [ div [class "navbar"] [ navbar ]
-        , div [class "content"] [ (content model) ]
-        , div [class "footer"] [ footerView ]
+    div [ class "wrapper" ]
+        [ div [ class "navbar" ] [ navbar ]
+        , div [ class "content" ] [ (content model) ]
+        , div [ class "footer" ] [ footerView ]
         ]
+
 
 viewLinks : String -> Html Msg
 viewLinks name =
     div [] [ a [ href ("#" ++ name) ] [ text name ] ]
+
 
 navbar : Html Msg
 navbar =
@@ -73,14 +73,15 @@ navbar =
 
 
 footerView : Html Msg
-footerView = 
-    footer [] [text "This is my footer"]
+footerView =
+    footer [] [ text "This is my footer" ]
+
 
 content : Model -> Html Msg
 content model =
     case model.page of
         Home ->
-            h1 [id "dupa"] [ text "Home page!" ]
+            h1 [ id "dupa" ] [ text "Home page!" ]
 
         About ->
             h1 [] [ text "About page!" ]
