@@ -17,9 +17,95 @@ html, body {
 
 .footer {
   padding: 1em;
-  background-color: #747474;
+  background-color: #7D7D7D;
+  color: #E8F1F2;
 }
 
 .content {
   flex: 1 0 auto;
 }
+.navbar-wrapper{
+  background-color: #44aae5;
+  /*min-height: 70px;*/
+  padding-right: 20px;
+
+
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: flex-end;
+  align-items: center;
+
+  
+
+}
+
+
+/*.navbar{
+  display: flex;
+  flex-flow: row wrap;
+   This aligns items to the end line on main-axis 
+  justify-content: flex-end;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /*align-items: flex-end;
+
+  flex-grow: 1;
+  
+  
+  } */
+.nav-item {
+  min-width: 80px;
+  text-align: center;
+  min-height: 80px;
+  align-self: flex-end;
+  list-style: none;
+    display: flex;
+  justify-content: center;
+  /* align-self: center; */
+  align-items: center;
+  background: silver;
+  
+  height: 20%;
+
+  
+}
+.nav-item:hover {
+  background-color: #42BFE2;
+  font-weight: bold;
+}
+.nav-item > a {
+  color:#E8F1F2;
+  text-decoration: none;
+}
+
+/* TO DO : Hamburger menu for mobile
+
+@media (min-device-width: 640px) {
+.navbarMobile{
+  display:none;
+  } 
+ }
+ @media (max-device-width: 640px) {
+.navbar{
+  display:none;
+  } 
+ }
+
+ .navbarMobile {
+
+  cursor:pointer;
+  position:absolute;
+  top:10px;
+  right:10px;
+  background-color: pink;
+  height:40px;
+  width:40px;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+ }*/

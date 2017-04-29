@@ -7,4 +7,6 @@ import Msg exposing (..)
 
 footerView : Html Msg
 footerView =
-    footer [] [ text "This is my footer" ]
+    footer [] [ 
+    i [class "fa fa-facebook-official fa-2x"] []
+    , text "This is my footer" ]

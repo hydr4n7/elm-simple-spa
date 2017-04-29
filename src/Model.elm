@@ -9,4 +9,7 @@ type Page
 
 type alias Model =
     { page : Page
+    , topic : String
+    , gifUrl : String
+    , tempVar : String
     }

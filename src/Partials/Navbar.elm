@@ -7,9 +7,9 @@ import Msg exposing (..)
 
 viewLinks : String -> Html Msg
 viewLinks name =
-    div [] [ a [ href ("#" ++ name) ] [ text name ] ]
+    li [ class "nav-item" ] [ a [ href ("#" ++ name) ] [ text name ] ]
 
 
 navbar : Html Msg
 navbar =
-    nav [] (List.map viewLinks [ "home", "about", "contact" ])
+    ul [class "navbar"] (List.map viewLinks [ "home", "about", "contact", "Very Long title", "a" ])
